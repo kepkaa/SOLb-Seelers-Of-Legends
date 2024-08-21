@@ -9,6 +9,14 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+#title {
+  font-size: 1.5em; /* Уменьшение размера текста */
+  position: absolute; /* Абсолютное позиционирование */
+  top: 10px; /* Отступ сверху */
+  left: 10px; /* Отступ слева */
+}
+
+
 body.light-mode {
   background-color: #f0f0f0;
   color: #2a2a2a;
