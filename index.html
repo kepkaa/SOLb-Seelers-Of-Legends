@@ -2,62 +2,41 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>SOLb Rust</title>
-<link rel="icon" href="URL_вашей_аватарки.png" type="image/png"> <!-- Укажите URL вашей картинки -->
-  <link rel="stylesheet" href="style.css"> <!-- Подключение CSS файла -->
-  <style>
-    .discord-link {
-      font-size: 0.8em; /* Уменьшение размера текста */
-      position: absolute; /* Установка в абсолютное позиционирование */
-      top: 10px; /* Отступ сверху */
-      left: 10px; /* Отступ слева */
-    }
-   #title {
-      font-size: 1.5em; /* Уменьшение размера текста */
-      position: absolute; /* Абсолютное позиционирование */
-      top: 10px; /* Отступ сверху */
-      left: 100px; /* Отступ слева (можно отрегулировать по необходимости) */
-  </style>
-</head>
+    <link rel="icon" href="URL_вашей_аватарки.png" type="image/png"> <!-- Укажите URL вашей картинки -->
+    <link rel="stylesheet" href="style.css"> <!-- Подключение CSS файла -->
+    <style>
+      .discord-link {
+        font-size: 0.8em; /* Уменьшение размера текста */
+        position: absolute; /* Установка в абсолютное позиционирование */
+        top: 10px; /* Отступ сверху */
+        left: 10px; /* Отступ слева */
+      }
+      #title {
+        font-size: 1.5em; /* Уменьшение размера текста */
+        position: absolute; /* Абсолютное позиционирование */
+        top: 10px; /* Отступ сверху */
+        left: 100px; /* Отступ слева (можно отрегулировать по необходимости) */
+      }
+    </style>
+  </head>
   <body>
     <header>
-       <h1 id="title" onclick="showSection('description')"><a href="#" style="text-decoration: none; color: inherit;">SOLb Rust</a></h1>
-      <link rel="icon" href="URL_вашей_аватарки.png" type="image/png" />
-      <!-- Укажите URL вашей картинки -->
-      <a
-        href="https://discord.gg/ZZXeQbxGBP"
-        target="_blank"
-        class="discord-link"
-      >
-        <img
-          src="https://sun9-21.userapi.com/impg/fcTbnG3b_rSlgLx9ubjQ9yEiKXqcq1N_C2bRmA/ga3XUdaJraI.jpg?size=512x512&quality=95&sign=02a371ef5b7e495855535e8c1510a666&type=album"
-          alt="Discord"
-          style="
-            width: 30px;
-            height: 30px;
-            vertical-align: middle;
-            margin-right: 5px;
-          "
-        />
-        Наш дискорд
-      </a>
+      <h1 id="title" onclick="showSection('description')">
+        <a href="#" style="text-decoration: none; color: inherit;">SOLb Rust</a>
+      </h1>
       <div class="menu-toggle" onclick="toggleMenu()">
-        &#9776;
-        <!-- Символ гамбургера (три полоски) -->
+        &#9776; <!-- Символ гамбургера (три полоски) -->
       </div>
       <div class="theme-toggle" onclick="toggleTheme()">
-        🌜
-        <!-- Иконка для смены темы -->
+        🌜 <!-- Иконка для смены темы -->
       </div>
     </header>
 
     <nav class="menu" id="navMenu">
       <a onclick="showSection('description')">📌Главная</a>
-      <a onclick="showSection('news')">📢Обновление
+      <a onclick="showSection('news')">📢Обновление</a>
       <a onclick="showSection('rules')">📋Правила</a>
       <a onclick="showSection('develops')">🛠️Разработка</a>
       <a onclick="showSection('title')">✏️Название софтов и ссылки</a>
@@ -367,6 +346,14 @@
         </ol>
       </ol>
     </section>
+
+    <footer>
+      <a href="https://discord.gg/ZZXeQbxGBP" target="_blank" class="discord-link">
+        <img src="https://sun9-21.userapi.com/impg/fcTbnG3b_rSlgLx9ubjQ9yEiKXqcq1N_C2bRmA/ga3XUdaJraI.jpg?size=512x512&quality=95&sign=02a371ef5b7e495855535e8c1510a666&type=album" alt="Discord" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 5px;" />
+        Наш дискорд
+      </a>
+      <p>© 2023–2024 SOLb-Seelers-Of-Legends</p>
+    </footer>
 
 <script>
   // Сохранение текущего раздела в localStorage
