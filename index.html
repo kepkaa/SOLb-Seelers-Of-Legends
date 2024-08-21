@@ -3,14 +3,14 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SOLb-Seelers-Of-Legends</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Name Server</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
       margin: 0;
-      padding: 0;
+      padding: 0 10px; /* Добавлено для отступов на мобильных устройствах */
       background-color: #2a2a2a;
       color: #e0e0e0;
       transition: background-color 0.3s, color 0.3s;
@@ -56,7 +56,7 @@
       position: fixed;
       top: 0;
       right: 0;
-      width: 250px;
+      width: 250px; /* Уменьшение ширины меню */
       height: 100%;
       background-color: #333;
       padding: 10px;
@@ -72,7 +72,7 @@
 
     .menu a {
       display: block;
-      padding: 10px;
+      padding: 8px 10px; /* Уменьшение отступов для компактности */
       text-decoration: none;
       color: #ffffff;
       border-bottom: 1px solid #444;
@@ -108,37 +108,32 @@
       text-decoration: none;
       color: #7289da;
       font-weight: bold;
+      font-size: 14px; /* Уменьшить размер шрифта для ссылки на Discord */
     }
 
     .discord-link:hover {
       text-decoration: underline;
     }
 
-    /* Медиазапросы для оптимизации на мобильных устройствах */
     @media (max-width: 768px) {
-
       header,
       section {
         padding: 15px;
       }
 
-      .menu {
-        width: 100%;
-      }
-
       .menu-toggle,
       .theme-toggle {
-        font-size: 20px;
+        font-size: 20px; /* Уменьшить размер иконок для мобильных */
       }
     }
 
     @media (max-width: 480px) {
       header h1 {
-        font-size: 1.5em;
+        font-size: 1.5em; /* Замените на нужный размер шрифта */
       }
 
       .menu a {
-        padding: 8px;
+        padding: 10px; /* Уменьшить отступы для мобильных */
       }
 
       section {
@@ -151,8 +146,11 @@
 
 <body>
   <header>
-    <h1>SOLb-Seelers-Of-Legends</h1>
-    <a href="https://discord.gg/ZZXeQbxGBP" target="_blank" class="discord-link">Наш дискорд</a>
+    <h1>Name Server</h1>
+    <a href="https://discord.gg/ZZXeQbxGBP" target="_blank" class="discord-link">
+      <img src="https://sun9-21.userapi.com/impg/fcTbnG3b_rSlgLx9ubjQ9yEiKXqcq1N_C2bRmA/ga3XUdaJraI.jpg?size=512x512&quality=95&sign=02a371ef5b7e495855535e8c1510a666&type=album" alt="Discord" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 5px;" />
+      Наш дискорд
+    </a>
     <div class="menu-toggle" onclick="toggleMenu()">
       &#9776; <!-- Символ гамбургера (три полоски) -->
     </div>
