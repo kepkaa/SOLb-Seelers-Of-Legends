@@ -2,47 +2,53 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <title>SOLb Rust</title>
-    <link rel="icon" href="URL_вашей_аватарки.png" type="image/png"> <!-- Укажите URL вашей картинки -->
-    <link rel="stylesheet" href="style.css"> <!-- Подключение CSS файла -->
-    <style>
-      .discord-link {
-        font-size: 0.8em; /* Уменьшение размера текста */
-        position: absolute; /* Установка в абсолютное позиционирование */
-        top: 10px; /* Отступ сверху */
-        left: 10px; /* Отступ слева */
-      }
-      #title {
-        font-size: 1.5em; /* Уменьшение размера текста */
-        position: absolute; /* Абсолютное позиционирование */
-        top: 10px; /* Отступ сверху */
-        left: 100px; /* Отступ слева (можно отрегулировать по необходимости) */
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Подключение CSS файла -->
   </head>
   <body>
     <header>
-      <h1 id="title" onclick="showSection('description')">
-        <a href="#" style="text-decoration: none; color: inherit;">SOLb Rust</a>
-      </h1>
+      <h1>SOLb Rust</h1>
+      <link rel="icon" href="URL_вашей_аватарки.png" type="image/png" />
+      <!-- Укажите URL вашей картинки -->
+      <a
+        href="https://discord.gg/ZZXeQbxGBP"
+        target="_blank"
+        class="discord-link"
+      >
+        <img
+          src="https://sun9-21.userapi.com/impg/fcTbnG3b_rSlgLx9ubjQ9yEiKXqcq1N_C2bRmA/ga3XUdaJraI.jpg?size=512x512&quality=95&sign=02a371ef5b7e495855535e8c1510a666&type=album"
+          alt="Discord"
+          style="
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin-right: 5px;
+          "
+        />
+        Наш дискорд
+      </a>
       <div class="menu-toggle" onclick="toggleMenu()">
-        &#9776; <!-- Символ гамбургера (три полоски) -->
+        &#9776;
+        <!-- Символ гамбургера (три полоски) -->
       </div>
       <div class="theme-toggle" onclick="toggleTheme()">
-        🌜 <!-- Иконка для смены темы -->
+        🌜
+        <!-- Иконка для смены темы -->
       </div>
     </header>
 
     <nav class="menu" id="navMenu">
-      <a onclick="showSection('description')">📌Главная</a>
-      <a onclick="showSection('news')">📢Обновление</a>
+      <a onclick="showSection('description')">📢Главная</a>
       <a onclick="showSection('rules')">📋Правила</a>
-      <a onclick="showSection('develops')">🛠️Разработка</a>
-      <a onclick="showSection('title')">✏️Название софтов и ссылки</a>
-      <a onclick="showSection('screen_cheat')">🖥️Скриншот читов</a>
+      <a onclick="showSection('title')">Название софтов и ссылки</a>
+      <a onclick="showSection('screen_cheat')">Скриншот читов</a>
       <a onclick="showSection('ban')">🚫За что баним?</a>
-      <a onclick="showSection('check')">🕵️Основная проверка</a>
+      <a onclick="showSection('check')">Основная проверка</a>
     </nav>
 
     <section id="description" class="active">
@@ -62,23 +68,6 @@
       <p>В разработке данной базы принимали участие:</p>
       <p>🧛kepkaa<br />🧛Dylan</p>
     </section>
-  
-  <section id="news">
-  <h1>Добавлено/Изменено</h1>
-  <p>Смена цвета (белый, черный) - да</p>
-  <p>Регистрация - пока что нет</p>
-  <p>Выдавать доступ по нику, либо по почте - нет</p>
-  <p>Дискорд сервер - да</p>
-  <p>Туториал как проверять - частнично да</p>
-  <p>Аватарка сайта - нет</p>
-  </section>
-
-  <section id="develops">
-  <h1>В разработке находится</h1>
-  <p>1. Авторизация</p>
-  <p>2. Иконка оповощение при снятие</p>
-  <p>3. Выдача доступа через почту, либо ник</p>
-  </section>
 
     <section id="rules">
       <h2>Правила -> SOLb Rust</h2>
@@ -347,55 +336,30 @@
       </ol>
     </section>
 
-    <footer>
-      <a href="https://discord.gg/ZZXeQbxGBP" target="_blank" class="discord-link">
-        <img src="https://sun9-21.userapi.com/impg/fcTbnG3b_rSlgLx9ubjQ9yEiKXqcq1N_C2bRmA/ga3XUdaJraI.jpg?size=512x512&quality=95&sign=02a371ef5b7e495855535e8c1510a666&type=album" alt="Discord" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 5px;" />
-        Наш дискорд
-      </a>
-      <p>© 2023–2024 SOLb-Seelers-Of-Legends</p>
-    </footer>
+    <script>
+      function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+      }
 
-<script>
-  // Сохранение текущего раздела в localStorage
-  window.onload = function() {
-    const currentSection = localStorage.getItem('currentSection') || 'description';
-    showSection(currentSection);
-  };
+      function showSection(sectionId) {
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => section.classList.remove("active"));
+        document.getElementById(sectionId).classList.add("active");
+        document.getElementById("navMenu").classList.remove("active");
+      }
 
-  document.addEventListener('click', function(event) {
-    const menu = document.getElementById('navMenu');
-    const toggleButton = document.querySelector('.menu-toggle');
-
-    // Проверяем, произошёл ли клик вне меню и кнопки меню
-    if (!menu.contains(event.target) && !toggleButton.contains(event.target)) {
-      menu.classList.remove('active'); // Закрываем меню
-    }
-  });
-
-  function toggleMenu() {
-    const menu = document.getElementById('navMenu');
-    menu.classList.toggle('active');
-  }
-
-  function toggleTheme() {
-    document.body.classList.toggle('light-mode');
-    const header = document.querySelector('header');
-    header.classList.toggle('light-mode');
-  }
-
-  function showSection(sectionId) {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-      section.classList.remove('active');
-    });
-    document.getElementById(sectionId).classList.add('active');
-    localStorage.setItem('currentSection', sectionId); // Сохранение текущего раздела
-    
-    const menu = document.getElementById('navMenu');
-    menu.classList.remove('active'); // Закрытие меню
-    window.scrollTo({
-      top: document.getElementById(sectionId).offsetTop, // Прокрутка к выбранному разделу
-      behavior: 'smooth' // Плавная прокрутка
-    });
-  }
-</script>
+      function toggleTheme() {
+        document.body.classList.toggle("light-mode");
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => section.classList.toggle("light-mode"));
+        const header = document.querySelector("header");
+        header.classList.toggle("light-mode");
+        // Изменение текста иконки темы
+        const themeToggle = document.querySelector(".theme-toggle");
+        themeToggle.textContent = document.body.classList.contains("light-mode")
+          ? "🌞"
+          : "🌜";
+      }
+    </script>
+  </body>
+</html>
