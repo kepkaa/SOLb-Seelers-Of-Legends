@@ -119,6 +119,32 @@ section.active {
   text-decoration: underline;
 }
 
+.links-section {
+  max-width: 600px; /* Установите максимальную ширину */
+  margin: 0 auto; /* Выравнивание по центру */
+  padding: 20px; /* Увеличение отступов */
+  overflow: hidden; /* Скрыть переполненные элементы */
+}
+
+.links-section ul {
+  list-style-type: none; /* Убрать маркеры */
+  padding: 0; /* Убрать отступы */
+}
+
+.links-section li {
+  margin: 10px 0; /* Отступы между ссылками */
+}
+
+.links-section a {
+  text-decoration: none; /* Убрать подчеркивание */
+  color: blue; /* Цвет текста ссылок */
+}
+
+.links-section a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+
 @media (max-width: 768px) {
 
   header,
