@@ -344,30 +344,32 @@
       </ol>
     </section>
 
-    <script>
-      function toggleMenu() {
-        document.getElementById("navMenu").classList.toggle("active");
-      }
+      <script>
+    // Сохранение текущего раздела в localStorage
+    window.onload = function() {
+      const currentSection = localStorage.getItem('currentSection') || 'description';
+      showSection(currentSection);
+    };
 
-      function showSection(sectionId) {
-        const sections = document.querySelectorAll("section");
-        sections.forEach((section) => section.classList.remove("active"));
-        document.getElementById(sectionId).classList.add("active");
-        document.getElementById("navMenu").classList.remove("active");
-      }
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
 
-      function toggleTheme() {
-        document.body.classList.toggle("light-mode");
-        const sections = document.querySelectorAll("section");
-        sections.forEach((section) => section.classList.toggle("light-mode"));
-        const header = document.querySelector("header");
-        header.classList.toggle("light-mode");
-        // Изменение текста иконки темы
-        const themeToggle = document.querySelector(".theme-toggle");
-        themeToggle.textContent = document.body.classList.contains("light-mode")
-          ? "🌞"
-          : "🌜";
-      }
-    </script>
-  </body>
+    function toggleTheme() {
+      document.body.classList.toggle('light-mode');
+      const header = document.querySelector('header');
+      header.classList.toggle('light-mode');
+    }
+
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      document.getElementById(sectionId).classList.add('active');
+      localStorage.setItem('currentSection', sectionId); // Сохранение текущего раздела
+    }
+  </script>
+</body>
 </html>
