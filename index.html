@@ -1,42 +1,39 @@
 <!doctype html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <title>SOLb Rust</title>
     <link rel="icon" href="URL_вашей_аватарки.png" type="image/png" />
     <link rel="stylesheet" href="style.css" />
     <!-- Подключение CSS файла -->
-  </head>
-  <body>
+</head>
+<body>
     <header>
-      <h1>SOLb Rust</h1>
-      <a href="https://discord.gg/ZZXeQbxGBP" target="_blank" class="discord-link">
-        <img src="https://sun9-21.userapi.com/impg/fcTbnG3b_rSlgLx9ubjQ9yEiKXqcq1N_C2bRmA/ga3XUdaJraI.jpg?size=512x512&quality=95&sign=02a371ef5b7e495855535e8c1510a666&type=album" alt="Discord" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 5px;" />
-        Наш дискорд
-      </a>
-      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
-      <div class="theme-toggle" onclick="toggleTheme()">🌜</div>
+        <a href="#" onclick="showSection('description'); return false;"><h1>SOLb Rust</h1></a>
+        <a href="https://discord.gg/ZZXeQbxGBP" target="_blank" class="discord-link">
+            <img src="https://sun9-21.userapi.com/impg/fcTbnG3b_rSlgLx9ubjQ9yEiKXqcq1N_C2bRmA/ga3XUdaJraI.jpg?size=512x512&quality=95&sign=02a371ef5b7e495855535e8c1510a666&type=album" alt="Discord" style="width: 30px; height: 30px; vertical-align: middle; margin-right: 5px;" />
+            Наш дискорд
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+        <div class="theme-toggle" onclick="toggleTheme()">🌜</div>
     </header>
 
     <nav class="menu" id="navMenu">
-      <a onclick="showSection('description')">📌Главная</a>
-      <a onclick="showSection('news')">📢Обновление</a>
-      <a onclick="showSection('rules')">📋Правила</a>
-      <a onclick="showSection('develops')">🛠️Разработка</a>
-      <a onclick="showSection('title')">✏️Название софтов и ссылки</a>
-      <a onclick="showSection('screen_cheat')">🖥️Скриншот читов</a>
-      <a onclick="showSection('ban')">🚫За что баним?</a>
-      <a onclick="showSection('check')">🕵️Основная проверка</a>
+        <a onclick="showSection('description')">📌Главная</a>
+        <a onclick="showSection('news')">📢Обновление</a>
+        <a onclick="showSection('rules')">📋Правила</a>
+        <a onclick="showSection('develops')">🛠️Разработка</a>
+        <a onclick="showSection('title')">✏️Название софтов и ссылки</a>
+        <a onclick="showSection('screen_cheat')">🖥️Скриншот читов</a>
+        <a onclick="showSection('ban')">🚫За что баним?</a>
+        <a onclick="showSection('check')">🕵️Основная проверка</a>
     </nav>
 
     <section id="description" class="active home">
-      <h2>Главная Страница</h2>
-      <p>Привет модератор(хелпер)! Тут ты найдешь всю информацию необходимую для работы.</p>
-      <p>Многие читеры, когда скачивают чит, переименовывают его. Для того чтобы узнать настоящее название, воспользуйся сайтом - <a href="https://www.virustotal.com" target="_blank">VirusTotal</a>.</p>
-      <p>МОДЕРАТОР, НЕ ТУПИ, ЧЕЛОВЕК МОЖЕТ ОТКАЗАТЬСЯ ОТ СКАЧИВАНИЯ ПРОГРАММ.</p>
-      <p>В разработке данной базы принимали участие:</p>
-      <p>🧛kepkaa<br />🧛Dylan</p>
+        <h2>Главная Страница</h2>
+        <p>Привет модератор(хелпер)! Тут ты найдешь всю информацию необходимую для работы.</p>
+        <p>Многие читеры, когда скачивают чит, переименовывают его. Для того чтобы узнать настоящее название, воспользуйся сайтом - <a href="https://www.virustotal.com" target="_blank">VirusTotal</a>.</p>
     </section>
 
     <section id="rules">
@@ -166,27 +163,36 @@
     </section>
 
 
-   <script>
-  function toggleMenu() {
-    document.getElementById("navMenu").classList.toggle("active");
-  }
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
 
-  function showSection(sectionId) {
-    const sections = document.querySelectorAll("section");
-    sections.forEach((section) => section.classList.remove("active"));
-    document.getElementById(sectionId).classList.add("active");
-    document.getElementById("navMenu").classList.remove("active");
-  }
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll("section");
+            sections.forEach((section) => section.classList.remove("active"));
+            document.getElementById(sectionId).classList.add("active");
+            document.getElementById("navMenu").classList.remove("active");
+        }
 
-  function toggleTheme() {
-    document.body.classList.toggle("light-mode");
-    const sections = document.querySelectorAll("section");
-    sections.forEach((section) => section.classList.toggle("light-mode"));
-    const header = document.querySelector("header");
-    header.classList.toggle("light-mode");
-    
-    // Изменение текста иконки темы
-    const themeToggle = document.querySelector(".theme-toggle");
-    themeToggle.textContent = document.body.classList.contains("light-mode") ? "🌞" : "🌜";
-  }
+        function toggleTheme() {
+            document.body.classList.toggle("light-mode");
+            const sections = document.querySelectorAll("section");
+            sections.forEach((section) => section.classList.toggle("light-mode"));
+            const header = document.querySelector("header");
+            header.classList.toggle("light-mode");
+            const themeToggle = document.querySelector(".theme-toggle");
+            themeToggle.textContent = document.body.classList.contains("light-mode") ? "🌞" : "🌜";
+        }
+
+        // Закрытие меню при нажатии вне его
+        document.body.addEventListener("click", function (event) {
+            const menu = document.getElementById("navMenu");
+            if (menu.classList.contains("active") && !menu.contains(event.target) && event.target !== document.querySelector(".menu-toggle")) {
+                menu.classList.remove("active");
+            }
+        });
+    </script>
+</body>
+</html>
 </script>
