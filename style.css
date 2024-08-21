@@ -9,14 +9,6 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-#title {
-  font-size: 1.5em; /* Уменьшение размера текста */
-  position: absolute; /* Абсолютное позиционирование */
-  top: 10px; /* Отступ сверху */
-  left: 10px; /* Отступ слева */
-}
-
-
 body.light-mode {
   background-color: #f0f0f0;
   color: #2a2a2a;
@@ -118,32 +110,6 @@ section.active {
 .discord-link:hover {
   text-decoration: underline;
 }
-
-.links-section {
-  max-width: 600px; /* Установите максимальную ширину */
-  margin: 0 auto; /* Выравнивание по центру */
-  padding: 20px; /* Увеличение отступов */
-  overflow: hidden; /* Скрыть переполненные элементы */
-}
-
-.links-section ul {
-  list-style-type: none; /* Убрать маркеры */
-  padding: 0; /* Убрать отступы */
-}
-
-.links-section li {
-  margin: 10px 0; /* Отступы между ссылками */
-}
-
-.links-section a {
-  text-decoration: none; /* Убрать подчеркивание */
-  color: blue; /* Цвет текста ссылок */
-}
-
-.links-section a:hover {
-  text-decoration: underline; /* Подчеркивание при наведении */
-}
-
 
 @media (max-width: 768px) {
 
